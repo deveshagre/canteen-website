@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grain and Gosips | Campus Cafe</title>
+    <meta name="description" content="Grain and Gosips - The best coffee and snacks on campus.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="logo-container">
+            <h1>Grain & Gosips</h1>
+            <p class="tagline">Brewing conversations, one cup at a time.</p>
+        </div>
+        
+        <button id="cart-btn" class="cart-btn" aria-label="Open Cart">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            <span id="cart-count" class="cart-pill">0</span>
+        </button>
+    </header>
+
+   
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Fuel Your Studies</h2>
+            <p>Freshly brewed coffee and handmade snacks delivered to your hostel door.</p>
+            <a href="#menu-container" class="cta-button">View Menu</a>
+        </div>
+    </section>
+    
+    <nav class="category-nav">
+        <a href="#veg" class="nav-link">Veg Rice & Noodles</a>
+        <a href="#nonveg" class="nav-link">Non-Veg Rice & Noodles</a>
+        <a href="#burgers" class="nav-link">Burgers</a>
+        <a href="#pizza" class="nav-link">Pizza</a>
+        <a href="#sandwiches" class="nav-link">Sandwiches</a>
+        <a href="#snacks" class="nav-link">Snacks</a>
+        <a href="#beverages" class="nav-link">Beverages</a>
+    </nav>
+
+    <main id="menu-container" class="menu-container">
+        <div class="loading-text">Loading Menu...</div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Grain & Gosips</h3>
+                <p>Open Daily: 8:00 AM - 10:00 PM</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Phone: +91 98765 43210</p>
+                <p>Email: hello@grainandgosips.college</p>
+            </div>
+            <div class="footer-section">
+                <p class="small-text">&copy; 2025 Grain & Gosips. Demo Site.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="cart-modal" class="cart-modal hidden">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Your Tray</h2>
+                <button id="close-cart" class="close-btn" aria-label="Close Cart">&times;</button>
+            </div>
+            
+            <div id="cart-items" class="cart-items-container">
+                <p class="empty-cart-msg">Your cart is empty.</p>
+            </div>
+
+            <div class="cart-footer">
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="cart-subtotal">₹0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax (5%)</span>
+                    <span id="cart-tax">₹0.00</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total</span>
+                    <span id="cart-total">₹0.00</span>
+                </div>
+                <div class="cart-actions">
+                    <button id="clear-cart" class="btn-outline">Clear</button>
+                    <button id="checkout-btn" class="btn-primary">Place Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast" class="toast hidden">Item added to cart!</div>
+
+    <script src="app.js"></script>
+</body>
+</html>
